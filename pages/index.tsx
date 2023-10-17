@@ -2,33 +2,37 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className=" bg-slate-400 px-10 py-20 grid gap-10 space-y-5 min-h-screen">
+    <div className=" bg-slate-400 xl:place-content-center px-10 py-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3  min-h-screen">
       {/* 첫번째 카드 */}
-      <div className="bg-white p-6 rounded-3xl shadow-xl">
-        <span className="font-semibold text-3xl">Select Item</span>
+      <div className="bg-white dark:bg-black flex flex-col justify-between p-6 rounded-3xl shadow-xl">
+        <span className="font-semibold dark:text-white text-2xl">
+          Select Item
+        </span>
         <ul>
-          {[1, 2].map((i) => (
-            <div key={i} className="flex justify-between my-2">
-              <span className="text-gray-500">Grey Chair</span>
-              <span className="font-semibold">$19</span>
-            </div>
-          ))}
+          <div className="flex justify-between my-2">
+            <span className="text-gray-500 dark:text-gray-100">Grey Chair</span>
+            <span className="font-semibold dark:text-white">$19</span>
+          </div>
+          <div className="flex justify-between my-2">
+            <span className="text-gray-500 dark:text-gray-100">Grey Chair</span>
+            <span className="font-semibold dark:text-white">$19</span>
+          </div>
         </ul>
         <div className="mt-2 pt-2 border-t-2 border-dashed flex justify-between">
           <span>Total</span>
           <span className="font-semibold">$99</span>
         </div>
         <button
-          className="mt-5 bg-blue-500 p-3 text-center rounded-xl text-white w-2/4 mx-auto block
-         hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500
+          className="mt-5 bg-blue-500 dark:bg-black dark:border-white dark:border p-3 text-center rounded-xl text-white w-2/4 mx-auto block
+         hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500 dark:hover:bg-white dark:hover:text-black
         "
         >
           Checkout
         </button>
       </div>
       {/* 두번째 카드 */}
-      <div className="bg-white rounded-2xl shadow-xl overflow-hidden group">
-        <div className="bg-blue-500 p-6 pb-14">
+      <div className="bg-white rounded-2xl shadow-xl  overflow-hidden group">
+        <div className="bg-blue-500 landscape:bg-teal-400 portrait:bg-indigo-400 xl:pb-40 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
         <div className="rounded-3xl p-6 bg-white relative -top-5">
@@ -50,7 +54,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* 세번째 카드 */}
-      <div className="bg-white p-10 rounded-2xl shadow-xl">
+      <div className="bg-white p-10 rounded-2xl shadow-xl lg:col-span-2 xl:col-span-1">
         <div className="mb-5 flex justify-between items-center">
           <span>⬅️</span>
           <div className="space-x-3">
